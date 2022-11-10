@@ -50,20 +50,25 @@ eyJraWQiOiJtYXN0ZXJrZXlmaWxlOm1hc3RlcmtleS5jcnlwdG9tYXRvciIsInR5cCI6IkpXVCIsImFs
 The decoded header:
 ```json
 {
-  "kid": "type:object;name:masterKeyObject", /* says, that masterKey info is retrieved from function parameter called masterKeyObject as object */
+  "kid": "type:object;name:masterKeyObject",
   "typ": "JWT",
-  "alg": "HS256" /* current implementation only supports HS256 */
+  "alg": "HS256"
 }
 ```
+`"kid": "type:object;name:masterKeyObject"` means, that masterKey info is retrieved from function parameter called masterKeyObject as object. \
+Current implementation only supports HS256 as signature algorithm.
 
 The decoded payload:
 ```json
 {
-  "format": 8, /* vault format for checking software compatibility */
-  "jti": "ce976f7a-7b92-4cc0-b4c1-c74a6aa17cf5", /* random UUID to uniquely identify the vault */
-  "cipherCombo": "SIV_CTRMAC" /* currently only SIV_CTRMAC is supported */
+  "format": 8,
+  "jti": "ce976f7a-7b92-4cc0-b4c1-c74a6aa17cf5",
+  "cipherCombo": "SIV_CTRMAC"
 }
 ```
+`"format": 8`: vault format for checking software compatibility \
+`"jti": "ce976f7a-7b92-4cc0-b4c1-c74a6aa17cf5"`: random UUID to uniquely identify the vault \
+Currently SIV_CTRMAC is the only supported cipherCombo.
 
 When opening a vault, the following steps are done:
 * Decode the JWT without verification
@@ -93,10 +98,12 @@ The wrapped keys and the parameters needed to derive the KEK are then stored as 
     "scryptSalt": "QGk...jY=",
     "scryptCostParam": 16384,
     "scryptBlockSize": 8,
-    "primaryMasterKey": "QDi...Q==", /* wrappedEncryptionMasterKey */
-    "hmacMasterKey": "L83...Q==", /* wrappedMacMasterKey */
+    "primaryMasterKey": "QDi...Q==",
+    "hmacMasterKey": "L83...Q==",
 }
 ```
+`"primaryMasterKey": "QDi...Q=="`: wrappedEncryptionMasterKey (shortened in this example) \
+`"hmacMasterKey": "L83...Q=="`: wrappedMacMasterKey (shortened in this example)
 
 When unlocking a vault the KEK is used to unwrap (i.e. decrypt) the stored masterkeys.
 ```
