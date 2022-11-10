@@ -4,7 +4,7 @@ Cryptomator's crypto architecture, simplified and decoupled, written in TypeScri
 
 Makes data thieves sad and makes them cry because they can't do anything with your data anymore, which is good for you.
 
-## Description
+## Introduction
 
 ### Cryptomator
 
