@@ -197,5 +197,5 @@ This can be useful for encryption of filenames, paths and the like.
 
 ## License
 
-This project is licensed under the AGPLv3. \
+This project is licensed under the MIT License. \
 [See License](LICENSE.txt)
