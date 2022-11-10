@@ -181,6 +181,7 @@ This can be useful for encryption of filenames, paths and the like.
   * the attacker has write access to the storage
   * the user stores data, that is meant to be published or shared, in the same vault alongside secret data
   * the user publishes content of decrypted directories without checking (e.g. huge vaults, missing clarity)
+  
   A fix (passing buffer-associated data on buffer header mac creation) could lead to performance issues. \
   Example: Assuming the example above, if the user renames a file, the header mac must be rewritten.
   If the file is saved online this can require complete file download and upload (download, change header mac, upload). \
