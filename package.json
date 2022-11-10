@@ -1,0 +1,44 @@
+{
+  "name": "cry-sad-ts",
+  "version": "0.0.0",
+  "description": "Cryptomator's crypto architecture, simplified and decoupled, written in TypeScript.",
+  "contributors": [
+    {
+      "name": "mark-herrmann",
+      "email": "github@markherrmann.de"
+    }
+  ],
+  "private": false,
+  "main": "build/lib/index.js",
+  "types": "build/lib/index.d.ts",
+  "author": "Mark Herrmann (mark-herrmann)",
+  "bugs": {
+    "url": "https://github.com/mark-herrmann/cry-sad-ts/issues"
+  },
+  "homepage": "https://github.com/mark-herrmann/cry-sad-ts#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "assertthat": "6.5.2",
+    "roboter": "13.2.1",
+    "typescript": "4.8.4"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark-herrmann/cry-sad-ts.git"
+  },
+  "keywords": [
+    "crypto",
+    "aes",
+    "hmac",
+    "scrypt",
+    "siv",
+    "cryptofs",
+    "cryptomator",
+    "encryption",
+    "decryption",
+    "buffer",
+    "deterministic"
+  ],
+  "license": "AGPL-3.0-only"
+}
